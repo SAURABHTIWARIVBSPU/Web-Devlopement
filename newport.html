@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,13 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #ffeeee;
-            color: #e90404;
+            background-color: #f8f8f8;
+            color: #333333;
         }
 
         header {
-            background-color: #fafafa;
-            color: #ffadad;
+            background-color: #d3fbf2;
+            color: #ffffff;
             padding: 20px;
             text-align: center;
         }
@@ -26,17 +27,20 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
         }
 
-        h1, h2, h3 {
+        h1,
+        h2,
+        h3 {
             margin: 10px 0;
             text-align: center;
-            color: #1f1a02;
+            color: #333333;
         }
 
         main {
             padding: 20px;
-            background-color: #ffd6d6;
-            box-shadow: 0 0 10px rgb(243, 240, 240);
+            background-color: #f3f3c7;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             border-radius: 5px;
+            margin: 20px;
         }
 
         section {
@@ -49,10 +53,11 @@
             margin-top: 20px;
         }
 
-        th, td {
+        th,
+        td {
             padding: 10px;
             text-align: left;
-            border-bottom: 1px solid #222310;;
+            border-bottom: 1px solid #dddddd;
         }
 
         th {
@@ -82,9 +87,10 @@
         }
 
         footer {
-            background-color: #e3fbce;
+            background-color: #f2e9db;
             padding: 20px;
             text-align: center;
+            color: #ffffff;
         }
 
         footer ul {
@@ -95,17 +101,32 @@
             font-size: 24px;
             margin-right: 10px;
             vertical-align: middle;
-            color: #3300fe;
+            color: #7458f3;
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script>
+        // Smooth scrolling
+        document.addEventListener('DOMContentLoaded', function () {
+            const links = document.querySelectorAll('a[href^="#"]');
+            for (let i = 0; i < links.length; i++) {
+                links[i].addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(links[i].hash);
+                    target.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            }
+        });
+    </script>
 </head>
 
 <body>
     <header>
         <img src="web jpg.jpg" alt="photo" width="200" height="200">
         <h2>A photograph of Saurabh Tiwari</h2>
-        <h1>Portfolio</h1>  
+        <h1>Portfolio</h1>
         <h2>
             Soon-to-be a Computer Science Graduation Student
             <br>
@@ -118,7 +139,6 @@
                 <li><a href="#contactId">Contact Me</a></li>
             </ul>
         </nav>
-        
     </header>
 
     <main>
@@ -178,21 +198,23 @@
             <ul>
                 <li>
                     <a href="https://github.com/SAURABHTIWARIVBSPU">
-                        <i class="fa fa-github" style="font-size: 48px; color: #141514"></i>
+                        <i class="fa fa-github" style="font-size: 48px; color: #191919"></i>
                     </a>
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/saurabh-tiwari-a3296b227/">
-                        <i class="fa fa-linkedin" style="font-size: 48px; color: rgb(24, 16, 188)"></i>
+                    
+                        <i class="fa fa-linkedin" style="font-size: 48px; color: rgb(24, 16, 188)"></i
                     </a>
                 </li>
                 <li>
                     <a href="https://api.whatsapp.com/send?phone=8948905711">
-                        <i class="fa fa-whatsapp" style="font-size: 48px; color: rgb(77, 255, 136)"></i>
+                        <i class="fa fa-whatsapp" style="font-size: 48px; color: #23fb40"></i>
                     </a>
                 </li>
             </ul>
         </section>
     </footer>
 </body>
+
 </html>
