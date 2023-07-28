@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -7,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <style>
-        
+        /* Global styles */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -84,8 +83,6 @@
             transition: color 0.3s ease;
         }
 
-        
-
         a:hover {
             color: #000000;
         }
@@ -106,6 +103,43 @@
             margin-right: 10px;
             vertical-align: middle;
             color: #7458f3;
+        }
+
+        /* Media queries */
+        @media only screen and (max-width: 600px) {
+            /* Mobile styles */
+            img {
+                width: 100%;
+            }
+
+            nav {
+                text-align: center;
+            }
+
+            ul {
+                margin-top: 10px;
+            }
+
+            li {
+                display: block;
+                margin: 10px 0;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            h2 {
+                font-size: 16px;
+            }
+
+            h3 {
+                font-size: 16px;
+            }
+
+            table {
+                font-size: 14px;
+            }
         }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -137,7 +171,6 @@
             I love Web Development and I am eager to continue exploring innovative software-defined technologies
         </h2>
         <nav>
-            <ul>
                 <li><a href="#educationId">Education</a></li>
                 <li><a href="#projectsId">Projects</a></li>
                 <li><a href="#contactId">Contact Me</a></li>

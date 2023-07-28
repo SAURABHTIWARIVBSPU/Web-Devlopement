@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exception Handling in JavaScript</title>
+</head>
+<body>
+  <h1>Exception Handling in JavaScript</h1>
+  <button onclick="handleException()">Click Me</button>
+
+  <script>
+    function handleException() {
+      try {
+        // This code will throw an exception
+        var undefinedVar;
+        undefinedVar.someMethod();
+      } catch (error) {
+        // Exception is caught and handled here
+        console.log("An exception occurred:", error.message);
+      } finally {
+        // This block will always execute
+        console.log("Exception handling complete.");
+      }
+    }
+  </script>
+</body>
+</html>
