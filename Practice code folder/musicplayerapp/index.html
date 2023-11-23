@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Music Player</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      background-color: #b2d6ff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    #musicPlayer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgb(189, 193, 239);
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      max-width: 600px;
+      width: 100%;
+    }
+
+    #intro {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #ff0000;
+    }
+
+    #jh {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    audio {
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    button {
+      margin-top: 10px;
+      padding: 10px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div id="musicPlayer">
+    <h1 id="intro">Welcome to the Music Player App</h1>
+    <img id="jh" src="jh.jpg" alt="Song 1 Logo">
+    <audio id="audio" controls>
+      <source src="_Mere Rashke Qamar.mp3" type="audio/mp3">
+      Your browser does not support the audio tag.
+    </audio>
+    <button id="playPauseBtn" class="btn btn-success">Play</button>
+    <button id="stopBtn" class="btn btn-danger">Next</button>
+  </div>
+
+  <script>
+    const songs = [
+      { logo: 'jh.jpg', audio: 'm.mp3' },
+      { logo: 'jh.jpg', audio: 'check.mp3' },
+      // Add more songs as needed
+    ];
+
+    const musicPlayer = document.getElementById('musicPlayer');
+    const intro = document.getElementById('intro');
+    const logo = document.getElementById('jh');
+    const audio = document.getElementById('audio');
+    const playPauseBtn = document.getElementById('playPauseBtn');
+    const nextBtn = document.getElementById('stopBtn');
+
+    let isPlaying = false;
+    let currentSongIndex = 0;
+
+    function loadSong(index) {
+      const song = songs[index];
+      logo.src = song.logo;
+      audio.src = song.audio;
+    }
+
+    function togglePlayPause() {
+      if (isPlaying) {
+        audio.pause();
+        playPauseBtn.textContent = 'Play';
+      } else {
+        audio.play();
+        playPauseBtn.textContent = 'Pause';
+      }
+      isPlaying = !isPlaying;
+    }
+
+    function playNextSong() {
+      currentSongIndex = (currentSongIndex + 1) % songs.length;
+      loadSong(currentSongIndex);
+      audio.play();
+      playPauseBtn.textContent = 'Pause';
+      isPlaying = true;
+    }
+
+    playPauseBtn.addEventListener('click', togglePlayPause);
+    nextBtn.addEventListener('click', playNextSong);
+
+    // Load the first song
+    loadSong(currentSongIndex);
+  </script>
+</body>
+</html>
