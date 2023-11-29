@@ -1,0 +1,17 @@
+.box{
+    border: 1px solid black;
+    height: 200px;
+    width: 150px;
+    background-image:linear-gradient(red,blue);}
+    .myname{
+        border: 1px solid black;
+        margin: 10px;
+        height: 300px;
+        width: 250px;
+    background-image: radial-gradient( red, blue,rgb(255, 213, 213));
+    
+    
+    }
+ /* background-image:linear-gradient(to right ,red,blue); for right to left changing the colour
+.mybox{
+

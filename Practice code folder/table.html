@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details Form</title>
+</head>
+<link rel="stylesheet" href="table.css">
+
+<meta name="copyright" content="Copyright © 2023  All Rights Reserved."/>
+<body>
+    <h1>Student Details Form</h1>
+
+    <form action="submit.php" method="post">
+        <table>
+            <tr>
+                <td><label for="name">Name:</label></td>
+                <td><input type="text" id="name" name="name" required></td>
+            
+            </tr>
+            <tr>
+                <td><label for="gender">Gender:</label></td>
+                <td>
+                
+                    <br><input type="radio" id="male" name="gender" value="male">
+                    <br><label for="male">Male<br/label>
+                    <br><input type="radio" id="female" name="gender" value="female">
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="gender" value="other">
+                    <label for="other">Other</label>
+                </td>
+            </tr>
+            <tr>
+                <td><br><label for="mob">Mobile Number:</label></td>
+                <td><br><input type="tel" id="mob" name="mob" required pattern="[0-9]{10}" placeholder="e.g., 1234567890"></td>
+            </tr>
+            <tr>
+                <br><td><label for="email">Email:</label></td>
+                <td><br><input type="email" id="email" name="email" required></td>
+            </tr>
+            <tr>
+                <br><td><label for="Course">Course:</label></td>
+                <td><input type="text" id="name" name="Course" required></td>
+            </tr>
+        </tr>
+        <tr>
+            <td><label for="Branch">Branch:</label></td>
+            <td><input type="text" id="name" name="name" required></td>
+        </tr>
+        <tr>
+            <td><br><label for="Roll No">Roll No:</label></td>
+            <td><br><input type="number" id="Roll No" name="Roll No" required></td>
+        </tr>
+            
+        </table>
+<br>
+        <input type="submit" value="Submit"> <br>
+        <table>
+            <BR></BR>
+            <td colspan="6"><font color="RED" > copyright 2024  Saurabh Tiwari All right reserved<br></font></td>
+        </table>
+    </form>
+</body>
+</html>

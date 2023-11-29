@@ -17,4 +17,7 @@ h2{
   body{
     background-color: rgb(241, 255, 188);
   }
+  li hover{
+    color: #7d5151;
+  }
  
