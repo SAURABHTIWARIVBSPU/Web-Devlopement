@@ -1,5 +1,6 @@
 {
     "cSpell.words": [
         "sout"
-    ]
+    ],
+    "java.debug.settings.onBuildFailureProceed": true
 }
